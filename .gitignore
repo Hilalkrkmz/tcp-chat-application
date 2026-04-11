@@ -1,0 +1,7 @@
+/build/
+/dist/
+/nbproject/private/
+/*.class
+log.txt
+client_*
+server_*
