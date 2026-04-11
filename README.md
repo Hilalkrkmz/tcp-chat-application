@@ -1,5 +1,4 @@
-﻿# tcp-chat-application
-# 💬 TCP Chat Application (Java)
+# TCP Chat Application (Java)
 
 ## 📌 Proje Hakkında
 
@@ -8,19 +7,19 @@ Server-client mimarisi ile çalışır ve aynı anda birden fazla kullanıcıyı
 
 ---
 
-## 🚀 Özellikler
+##  Özellikler
 
-* 👥 Çoklu kullanıcı desteği (Thread yapısı)
-* 💬 Genel mesajlaşma
-* 🔒 Özel mesajlaşma (`@kullanıcıAdı`)
-* 📋 Online kullanıcı listesi
-* 📁 Dosya gönderme ve indirme
-* ❌ Çıkış sistemi
-* 🧾 Log sistemi (log.txt)
+*  Çoklu kullanıcı desteği (Thread yapısı)
+*  Genel mesajlaşma
+*  Özel mesajlaşma (`@kullanıcıAdı`)
+*  Online kullanıcı listesi
+*  Dosya gönderme ve indirme
+*  Çıkış sistemi
+*  Log sistemi (log.txt)
 
 ---
 
-## 🛠️ Kullanılan Teknolojiler
+##  Kullanılan Teknolojiler
 
 * Java
 * TCP Socket Programming
@@ -29,21 +28,21 @@ Server-client mimarisi ile çalışır ve aynı anda birden fazla kullanıcıyı
 
 ---
 
-## ⚙️ Nasıl Çalıştırılır?
+##  Nasıl Çalıştırılır?
 
-### 1️⃣ Server başlat
+### 1️ Server başlat
 
 ```
 Server.java çalıştırılır
 ```
 
-### 2️⃣ Client başlat
+### 2️ Client başlat
 
 ```
 ChatGUI.java çalıştırılır
 ```
 
-### 3️⃣ Kullanıcı adı gir
+### 3️ Kullanıcı adı gir
 
 ```
 Bağlantı kurulur ve sohbet başlar
@@ -63,7 +62,7 @@ ChatApp/
 
 ---
 
-## 📸 Özellik Açıklamaları
+##  Özellik Açıklamaları
 
 * Kullanıcılar aynı anda bağlanabilir
 * Mesajlar tüm kullanıcılara iletilir
@@ -72,7 +71,7 @@ ChatApp/
 
 ---
 
-## 🎯 Not
+##  Not
 
 Bu proje eğitim amaçlı geliştirilmiştir ve temel TCP iletişimi, thread yönetimi ve GUI kullanımını göstermektedir.
 
