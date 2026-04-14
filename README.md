@@ -9,7 +9,7 @@ It enables real-time communication between multiple users through a simple graph
 
 ##  Screenshot
 
-![Chat Application](screenshot.png)
+![Chat Application](screenshott.png)
 
 ---
 
