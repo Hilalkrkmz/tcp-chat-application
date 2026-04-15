@@ -2,6 +2,7 @@ package chatserver;
 
 import java.io.*;
 import java.net.*;
+import java.time.LocalTime;
 
 public class ClientHandler extends Thread {
 
@@ -26,7 +27,7 @@ public class ClientHandler extends Thread {
     }
 
     @Override
-public void run() {
+    public void run() {
 
     try {
 
@@ -37,7 +38,7 @@ public void run() {
 
         String message;
 
-        while ((message = input.readLine()) != null) {
+        while ((message = input.readLine()) != null) {//meaj dinliyor
         //EXİT
         if (message.equals("EXIT")) {
         System.out.println(username + " çıkış yaptı.");
@@ -58,14 +59,15 @@ public void run() {
         continue;
     }
 
-    String targetUser = message.substring(1, spaceIndex);
+    String targetUser = message.substring(1, spaceIndex);//@ dahil deil isim
     String privateMsg = message.substring(spaceIndex + 1);
 
     boolean found = false;
 
     for (ClientHandler client : Server.clients) {
         if (client.username.equals(targetUser)) {
-            client.output.println("(Özel) " + username + ": " + privateMsg);
+            String time = java.time.LocalTime.now().withNano(0).toString();
+            client.output.println("[" + time + "] (Özel) " + username + ": " + privateMsg);
             found = true;
             break;
         }
@@ -76,8 +78,9 @@ public void run() {
     }
 
 } else {
-
-    String fullMessage = username + ": " + message;
+    //normal msj kısmı
+    String time = java.time.LocalTime.now().withNano(0).toString();
+    String fullMessage = "[" + time + "] " + username + ": " + message;
     Server.log(fullMessage);
 
     for (ClientHandler client : Server.clients) {
@@ -85,10 +88,8 @@ public void run() {
     }
 }
     
-       //FİLE 
+    //FİLE 
     if (message.startsWith("FILE:")) {
-
-   if (message.startsWith("FILE:")) {
 
     String[] parts = message.split(":");
     String fileName = parts[1];
@@ -106,10 +107,10 @@ public void run() {
         }
     }
 
-    long remaining = fileSize;
+    long kalanByte = fileSize;
 
-    while (remaining > 0) {
-        int read = is.read(buffer, 0, (int)Math.min(buffer.length, remaining));
+    while (kalanByte > 0) {
+        int read = is.read(buffer, 0, (int)Math.min(buffer.length, kalanByte));
 
         if (read == -1) break;
 
@@ -119,12 +120,12 @@ public void run() {
             }
         }
 
-        remaining -= read;
+        kalanByte -= read;
     }
 
     continue;
 }
-}
+
         
         
         }
