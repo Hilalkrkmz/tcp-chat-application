@@ -69,6 +69,3 @@ ChatApp/
 
 This project is developed for educational purposes to demonstrate TCP communication, multithreading, and GUI development in Java.
 
-## License
-
-This project was developed for educational purposes.
